@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: iot-app-ingress
   namespace: dev
-  annotations:
-    traefik.ingress.kubernetes.io/router.middlewares: "default-strip-prefix@kubernetescrd"
 spec:
   ingressClassName: traefik
   rules:
