@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: iot-app
-        image: wil42/playground:v1  # Will be updated by ArgoCD
+        image: wil42/playground:v2  # Will be updated by ArgoCD
         ports:
         - containerPort: 8888
         env:
