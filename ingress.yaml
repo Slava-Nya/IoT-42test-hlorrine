@@ -4,9 +4,9 @@ metadata:
   name: iot-app-ingress
   namespace: dev
   annotations:
-    kubernetes.io/ingress.class: "traefik"
     traefik.ingress.kubernetes.io/router.middlewares: "default-strip-prefix@kubernetescrd"
 spec:
+  ingressClassName: traefik
   rules:
   - host: playground.com
     http:
