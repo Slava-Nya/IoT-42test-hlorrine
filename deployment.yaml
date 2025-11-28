@@ -17,28 +17,9 @@ spec:
     spec:
       containers:
       - name: iot-app
-        image: wil42/playground:v2  # Will be updated by ArgoCD
+        image: wil42/playground:v2
         ports:
         - containerPort: 8888
         env:
         - name: APP_VERSION
-          value: "v1"
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8888
-          initialDelaySeconds: 10
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8888
-          initialDelaySeconds: 5
-          periodSeconds: 5
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "50m"
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
+          value: "v2"
