@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: wil-playground
+  name: wil-playground-ingress
   namespace: dev
   annotations:
     kubernetes.io/ingress.class: "traefik"
@@ -14,6 +14,6 @@ spec:
         path: /
         backend:
           service:
-            name: wil-playground
+            name: wil-playground-service
             port:
               number: 8888
