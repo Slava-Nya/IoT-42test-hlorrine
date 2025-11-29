@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: iot-app
+  name: wil-playground
   labels:
-    app: iot-app
+    app: wil-playground
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: iot-app
+      app: wil-playground
   template:
     metadata:
       labels:
-        app: iot-app
+        app: wil-playground
     spec:
       containers:
-      - name: iot-app
+      - name: wil-playground
         image: wil42/playground:v1  # Will be updated by ArgoCD
         ports:
         - containerPort: 8888
