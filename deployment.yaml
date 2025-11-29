@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: iot-app
-  namespace: dev
   labels:
     app: iot-app
 spec:
@@ -17,9 +16,9 @@ spec:
     spec:
       containers:
       - name: iot-app
-        image: wil42/playground:v2
+        image: wil42/playground:v1  # Will be updated by ArgoCD
         ports:
         - containerPort: 8888
         env:
         - name: APP_VERSION
-          value: "v2"
+          value: "v1"
