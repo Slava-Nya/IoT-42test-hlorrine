@@ -21,4 +21,4 @@ spec:
         - containerPort: 8888
         env:
         - name: APP_VERSION
-          value: "v1"
+          value: "v2"
